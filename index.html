@@ -1,3 +1,80 @@
 ---
-layout: home
+layout: default
+permalink: /
+bootstrap: true
 ---
+<style>
+    #particles-js {
+        background-color: #257842;
+        background-image: url("assets/img/top.png");
+        background-repeat: no-repeat;
+        background-size: 28%;
+        background-position: 50% 60%;
+        width: 100%;
+        height: 700px;
+    }
+
+    .green {
+        color: #257842;
+    }
+
+     .bottom {
+         margin: 50px;
+     }
+
+     .pillar {
+         text-align: center;
+     }
+
+    .pillar-icon {
+        font-size: 50px;
+    }
+</style>
+<!-- Particle Header -->
+<div id="particles-js"></div>
+<script src="/assets/js/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', '/assets/particles.json', function () {
+        console.log('particles.js loaded - callback');
+    });
+</script>
+
+<div class="bottom">
+    <p>
+        Each kind of network has a needs of adequacy.
+        On one side, some network nodes need to consume items such as watt, litter, package.
+        And other side, some network nodes produce items.
+        Applying adequacy on network, is trying to find the best available exchanges to avoid any lack at the best cost.
+    </p>
+
+    <p class="green">Hadar is an open source python library to perform adequacy by everyone.</p>
+
+    <h3 style="text-align: center;"> WHY HADAR IS THE BEST CHOICE ?</h3>
+</div>
+
+
+
+<div class="container-fluid">
+<div class="row" style="margin-top:64px">
+        <div class="col-md-3 pillar">
+            <i class="fa fa-universal-access pillar-icon green"></i>
+            <h3 >Easy to Use</h3>
+            <p>Make your first adequacy in seconds, not days. Hadar is an adequacy solver design for everyone</p>
+        </div>
+        <div class="col-md-3 pillar">
+            <i class="fab fa-osi pillar-icon green"></i>
+            <h3 class="w3-large">Open Source</h3>
+            <p>Tired of cost expansive and vendor lock solution ? Switch to open source, keep software and data on your control.</p>
+        </div>
+        <div class="col-md-3 pillar">
+            <i class="fa fa-arrows-alt-h pillar-icon green"></i>
+            <h3 class="w3-large">End to End</h3>
+            <p>Hadar is not just a study adequacy solver, it can generate your studies, aggregates and plotting your results</p>
+        </div>
+        <div class="col-md-3 pillar">
+            <i class="fa fa-tools pillar-icon green"></i>
+            <h3 class="w3-large">Extended</h3>
+            <p>Addd your python code. Hadar is designed to be flexible and easy extended by your business</p>
+        </div>
+    </div>
+</div>
