@@ -22,6 +22,7 @@ feature-img: "assets/img/posts.png"
         font-size: 20px;
         margin-left: -1px;
         padding: 10px 20px 10px 20px;
+        border: solid 2px #257842;
         background: #257842;
         color: white;
     }
@@ -51,7 +52,7 @@ feature-img: "assets/img/posts.png"
 
 <div id="panel" class="panel">
     <button id="toggle" class="toggle" onclick="toggleSideBar()">Close list</i></button>
-    <h3 id="title" style="text-align: center">Title</h3>
+    <h3 id="title" style="text-align: center">Tutorial: </h3>
     <iframe id="notebook"
             style="border: none; width: 100%"
             onload="this.style.height=(this.contentWindow.document.body.scrollHeight+40)+'px';"></iframe>
@@ -83,12 +84,10 @@ feature-img: "assets/img/posts.png"
     if (name !== null) {
         toggleSideBar();
         // Update title with new name
-        document.getElementById('title').innerText = name
+        document.getElementById('title').innerText = 'Tutorial: ' + name
 
         // Update iframe with correct path to exported notebook
         document.getElementById('notebook').src = '/assets/notebook/' + name;
-    } else {
-        document.getElementById('title').innerText = 'Tutorials'
     }
 
 </script>
