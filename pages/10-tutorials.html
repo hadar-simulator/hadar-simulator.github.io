@@ -1,0 +1,94 @@
+---
+layout: default
+title: Tutorial
+permalink: /tutorial/
+feature-img: "assets/img/posts.png"
+---
+
+<style>
+    .sidebar {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 300px;
+        background: white;
+        border: solid 2px #257842;
+        border-left: none;
+        transition: 0.5s;
+        overflow-x: hidden;
+    }
+
+    .toggle {
+        font-size: 20px;
+        margin-left: -1px;
+        padding: 10px 20px 10px 20px;
+        background: #257842;
+        color: white;
+    }
+
+    .sidebar-item {
+        color: #494949;
+        display: block;
+        padding: 20px;
+    }
+
+    .sidebar-item:hover {
+        background: rgba(37, 120, 66, 0.3);
+    }
+
+    .panel {
+        margin-left: 300px;
+        transition: 0.5s;
+    }
+
+</style>
+
+<div id="sidebar" class="sidebar">
+    {% for notebook in site.data.notebooks %}
+    <a class="sidebar-item" href="/tutorial?name={{ notebook.name }}">{{ notebook.name }}</a>
+    {% endfor %}
+</div>
+
+<div id="panel" class="panel">
+    <button id="toggle" class="toggle" onclick="toggleSideBar()">Close list</i></button>
+    <h3 id="title" style="text-align: center">Title</h3>
+    <iframe id="notebook"
+            style="border: none; width: 100%"
+            onload="this.style.height=(this.contentWindow.document.body.scrollHeight+40)+'px';"></iframe>
+
+</div>
+
+<script>
+    function toggleSideBar() {
+        const sidebar = document.getElementById("sidebar");
+        if (sidebar.style.width === '0px') {
+            sidebar.style.width = '300px';
+            document.getElementById('toggle').innerText = 'Close List';
+            document.getElementById('panel').style.marginLeft = '300px';
+        } else {
+            sidebar.style.width = '0px';
+            document.getElementById('toggle').innerText = 'Open List';
+            document.getElementById('panel').style.marginLeft = '0px';
+        }
+    }
+
+    // Set sidebar top position same as toggle button
+    const offsetY = window.scrollY + document.getElementById('toggle').getBoundingClientRect().top;
+    document.getElementById('sidebar').style.top = offsetY.toString() + 'px'
+
+    // Get notebook name in query path
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+
+    if (name !== null) {
+        toggleSideBar();
+        // Update title with new name
+        document.getElementById('title').innerText = name
+
+        // Update iframe with correct path to exported notebook
+        document.getElementById('notebook').src = '/assets/notebook/' + name;
+    } else {
+        document.getElementById('title').innerText = 'Tutorials'
+    }
+
+</script>
