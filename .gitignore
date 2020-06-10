@@ -29,3 +29,8 @@ jekyll-theme-type-on-strap.gemspec
 .jekyll-cache/*
 test/*
 assets/package-lock.json
+
+# python
+**/venv
+*.pyc
+
