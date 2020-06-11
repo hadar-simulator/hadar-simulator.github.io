@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Blogging with title
+title: First Post
 tags: [Test, Math]
+bootstrap: true
 ---
-
-<h1>Test Latex math syntax</h1>
+# First post to try jekyll and Katex
 
 $$ f(x) = \int \frac{2x^2+4x+6}{x-2} $$
