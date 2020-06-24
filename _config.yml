@@ -3,10 +3,6 @@
 baseurl: ""
 url: "https://hadar-simulator.org"
 
-Navigation:
-  - title: Github
-    url: https://github.com/hadar-simulator/hadar
-
 # THEME-SPECIFIC CONFIGURATION
 title: Hadar Simulator                                    # site's title
 description: "An Open Source Adequacy Library for Everyone"      # used by search engines
@@ -24,7 +20,6 @@ post_navigation: true
 color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
 # Features
-katex: true                                             # Enable if using math markup
 google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
 disqus_shortname:                                       # Your discus shortname for comments
 layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"

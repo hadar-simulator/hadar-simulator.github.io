@@ -10,7 +10,6 @@ echo "Setup python env"
 python3 -m virtualenv venv
 source venv/bin/activate
 pip install -r examples/requirements.txt
-pip install click
 
 echo "Launch exporter"
 python3 examples/utils.py --src=./examples --export=./assets/notebook
