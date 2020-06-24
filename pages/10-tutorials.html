@@ -45,9 +45,19 @@ feature-img: "assets/img/posts.png"
 </style>
 
 <div id="sidebar" class="sidebar">
-    {% for notebook in site.data.notebooks %}
-    <a class="sidebar-item" href="/tutorial?name={{ notebook.name }}">{{ notebook.name }}</a>
-    {% endfor %}
+
+    <h3>Basic</h3>
+    <a class="sidebar-item" href="/tutorial?name=Get Started">Get Started</a>
+    <a class="sidebar-item" href="/tutorial?name=Cost and Prioritization">Cost and Prioritization</a>
+    <a class="sidebar-item" href="/tutorial?name=FR-DE Adequacy">FR-DE Adequacy</a>
+    <a class="sidebar-item" href="/tutorial?name=Analyze Result">Analyze Result</a>
+    <a class="sidebar-item" href="/tutorial?name=Network Investment">Network Investment</a>
+
+    <h3>Stochastic</h3>
+    <a class="sidebar-item" href="/tutorial?name=Begin Stochastic">Begin Stochastic</a>
+    <a class="sidebar-item" href="/tutorial?name=Workflow">Workflow</a>
+    <a class="sidebar-item" href="/tutorial?name=Workflow Advanced">Workflow Advanced</a>
+
 </div>
 
 <div id="panel" class="panel">
